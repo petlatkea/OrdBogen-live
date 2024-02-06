@@ -24,6 +24,8 @@ public class App {
             Set<HeadWord> onlyHeadWords = new HashSet<>();
             // map til hurtigt opslag
             Map<Integer, HeadWord> quickLookUp = new HashMap<>();
+            // map til ordklasser
+            Map<String, Integer> posStatistics = new TreeMap<>();
 
             for( var word : allTheWords ) {
                 var headWord = new HeadWord(word);
@@ -33,6 +35,15 @@ public class App {
                 // så Set troede at hvert eneste objekt var unikt.
                 if(onlyHeadWords.add(headWord)) {
                     quickLookUp.put(headWord.getId(), headWord);
+
+                    // Opdater ordklassestatistik
+                    String pos = headWord.getPartOfSpeech();
+                    if(posStatistics.containsKey(pos)) {
+                        int count = posStatistics.get(pos) + 1;
+                        posStatistics.put(pos, count);
+                    } else {
+                        posStatistics.put(pos, 1);
+                    }
                 }
             }
 
@@ -42,6 +53,11 @@ public class App {
             System.out.println(quickLookUp.get(11050951));
             System.out.println(quickLookUp.get(11002241));
             System.out.println(quickLookUp.get(11022665));
+            System.out.println();
+            System.out.println("Statistik over ordklasser");
+            for(String pos : posStatistics.keySet()) {
+                System.out.printf("%-17s: %6d\n", pos, posStatistics.get(pos));
+            }
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
