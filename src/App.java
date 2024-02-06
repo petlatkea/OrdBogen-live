@@ -22,6 +22,8 @@ public class App {
             // Så vi bruger et Set - vi kunne ikke bruge TreeSet, fordi vores Opslagsord
             // ikke ved hvordan de skal sorteres - den tager vi senere, vi skiftede bare til HashSet
             Set<HeadWord> onlyHeadWords = new HashSet<>();
+            // map til hurtigt opslag
+            Map<Integer, HeadWord> quickLookUp = new HashMap<>();
 
             for( var word : allTheWords ) {
                 var headWord = new HeadWord(word);
@@ -29,10 +31,17 @@ public class App {
                 // Første gang vi addede opslagsord kom der dubletter ind i listen - fordi vi ikke i OpslagsOrd
                 // havde implementeret .equals og .hashCode der kun kiggede på "headword" -
                 // så Set troede at hvert eneste objekt var unikt.
-                onlyHeadWords.add(headWord);
+                if(onlyHeadWords.add(headWord)) {
+                    quickLookUp.put(headWord.getId(), headWord);
+                }
             }
 
             System.out.println("Der er " + onlyHeadWords.size() + " opslagsord");
+            System.out.println("Hurtige opslag:");
+            System.out.println(quickLookUp.get(11008444));
+            System.out.println(quickLookUp.get(11050951));
+            System.out.println(quickLookUp.get(11002241));
+            System.out.println(quickLookUp.get(11022665));
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);

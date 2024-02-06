@@ -37,5 +37,8 @@ public class HeadWord extends Word {
         return Objects.hash(getHeadWord(), getId());
     }
 
-
+    @Override
+    public String toString() {
+        return getHeadWord() + " - " + getPartOfSpeech() + " id: " + getId();
+    }
 }

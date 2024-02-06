@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e537d9f7-7dc7-4824-8d67-5d132dea9062" name="Changes" comment="">
+    <list default="true" id="e537d9f7-7dc7-4824-8d67-5d132dea9062" name="Changes" comment="improved version - better naming for one">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpslagsOrd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HeadWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HeadWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HeadWord.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="improved" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +46,7 @@
     "Application.Ordbogen.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "full.screen.before.presentation.mode": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -94,8 +96,25 @@
       <workItem from="1707125550308" duration="252000" />
       <workItem from="1707125814563" duration="4263000" />
       <workItem from="1707208192941" duration="689000" />
-      <workItem from="1707210272318" duration="4215000" />
+      <workItem from="1707210272318" duration="4825000" />
     </task>
+    <task id="LOCAL-00001" summary="improved version - better naming for one">
+      <option name="closed" value="true" />
+      <created>1707215206639</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707215206639</updated>
+    </task>
+    <task id="LOCAL-00002" summary="improved version - better naming for one">
+      <option name="closed" value="true" />
+      <created>1707215454405</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707215454405</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +130,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="improved version - better naming for one" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved version - better naming for one" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
