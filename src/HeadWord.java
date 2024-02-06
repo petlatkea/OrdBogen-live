@@ -2,17 +2,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class OpslagsOrd extends Word {
+public class HeadWord extends Word {
 
-    private List<String> listOfForms;
+    private List<String> listOfForms = new ArrayList<>();
 
     // Opslagsord kopierer fra Word - men tager "form" ud og gemmer i en liste.
-    public OpslagsOrd(Word word) {
+    public HeadWord(Word word) {
         super(word);
-
-        listOfForms = new ArrayList<>();
-
         listOfForms.add(super.getForm());
+    }
+
+    public void addForm(String form) {
+        listOfForms.add(form);
+    }
+
+    public String[] getAllForms() {
+        return listOfForms.toArray(new String[listOfForms.size()]);
     }
 
     // Vi lavede equals automatisk med IntelliJ - vi lavede den i Word, fordi det er
@@ -27,9 +32,10 @@ public class OpslagsOrd extends Word {
         return getId() == word.getId() && Objects.equals(getHeadWord(), word.getHeadWord());
     }
 
-    // hashCode lavede vi sammen med equals - fik editoren til at lave den automatisk
     @Override
     public int hashCode() {
         return Objects.hash(getHeadWord(), getId());
     }
+
+
 }

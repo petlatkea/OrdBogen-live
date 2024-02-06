@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Word {
     private String form;
     private String headWord;
